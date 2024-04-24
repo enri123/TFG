@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+}
+
+html {
+    /* Hace que el desplazamiento sea suave al hacer clic en los enlaces del menú */
+    scroll-behavior: smooth;
+}
+
+/* Estilos del menú */
+.contenedor-header {
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: #1CB698;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: #1CB698;
+}
+
+.nav-responsive {
+    background-color: green;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Estilos de la sección de inicio */
+.inicio {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
+    url(assets/kursaal-inicio-hero.jpeg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.inicio .contenido-banner {
+    padding: 20px;
+    background-color: green;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img {
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 40px;
+    font-size: 42px;
+}
+
+.inicio .contenido-banner h2 {
+    font-size: 15px;
+}
+
+.inicio .contenido-banner .redes a {
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+}
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: #1CB698;
+}
+
+/* Estilos de la sección de cursos */
+.cursos {
+    background-color: green;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.cursos h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cursos .contenido-seccion p {
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.cursos button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    cursor: pointer
+}
+
+.cursos button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.cursos button:hover .overlay {
+    width: 100%;
+}
+
+/* Estilos de la sección de razones */
+.razones {
+    background-color: lightgreen;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.razones .contenido-seccion {
+    width: 70%;
+    margin: auto;
+}
+
+.razones h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos de la sección de valoraciones */
+.valoraciones {
+    background-color: green;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.valoraciones .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.valoraciones h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Estilos de la sección de contacto */
+.contacto {
+    background-image: url(img/contact_bg.png);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contacto .fila {
+    display: flex;
+}
+
+.contacto .col {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.contacto .col input,
+.contacto .col textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+
+.contacto button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    cursor: pointer
+}
+
+.contacto button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.contacto button:hover .overlay {
+    width: 100%;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .arriba {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+
+}
+
+/* Estilos responsiv */
+@media screen and (max-width:980px) {
+    nav {
+        display: none;
+    }
+    
+    .nav-responsive {
+        display: block;
+    }
+    
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    
+    nav.responsive ul {
+        display: block !important;
+    }
+    
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cursos .fila {
+        display: block;
+    }
+    
+    .cursos .fila .col {
+        width: fit-content;
+    }
+    
+}
+
+/* Estilos para contenedor de secciones */
+.contenedor-seccion {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-bottom: 20px; /* Espacio entre las secciones */
+}
+
+/* Estilos para diferentes niveles de formación */
+.basica,
+.medio,
+.superior,
+.especializacion {
+    width: 75%; /* Ancho de cada sección */
+}
+.contenido{
+    width: 70%;
+}
+
+/* Estilos para la imagen dentro de un contenedor */
+.imagen {
+    width: 40%;
+    height: 50%;
+}
+
+.imagen img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor manteniendo la relación de aspecto */
+}
+
+/* Estilos para botón con overlay */
+.razones button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    cursor: pointer
+
+}
+
+.razones button a{
+    text-decoration: none;
+    color: #fff;
+}
+.razones button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.razones button:hover .overlay {
+    width: 100%;
+}

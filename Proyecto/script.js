@@ -75,32 +75,26 @@ function saber_mas_medio() {
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formContacto").addEventListener('submit', validarFormulario);
 });
-function validarFormulario(evento) {
-    evento.preventDefault();
+function validarFormulario(event) {
     var email = document.getElementById("email").value;
     var telefono = document.getElementById("telefono").value;
-    var formulario = document.getElementById("formContacto").value;
-    // Define our regular expression.
+
 	var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
     var validTelefono = /^\d{9}$/;
 
     if (validEmail.test(email) && validTelefono.test(telefono)) {
-            this.submit();
-    }
-    else if(validEmail.test(email) && !validTelefono.test(telefono)){
-            // Muestra un mensaje de error
-            document.getElementById('telefonoLabel').innerHTML = 'Introduzca un telefono valido';
+        // Si la validación es exitosa, envía el formulario
+        this.submit();
+    } else {
+        if (!validEmail.test(email)) {
+            event.preventDefault()
+            document.getElementById('emailLabel').innerHTML = 'Introduzca un email válido';
+            document.getElementById('emailLabel').style.color = 'red';
+        }
+        if (!validTelefono.test(telefono)) {
+            event.preventDefault()
+            document.getElementById('telefonoLabel').innerHTML = 'Introduzca un teléfono válido';
             document.getElementById('telefonoLabel').style.color = 'red';
-            return false;
-    }else if(!validEmail.test(email) && validTelefono.test(telefono)){
-        document.getElementById('emailLabel').innerHTML = 'Introduzca un email valido';
-        document.getElementById('emailLabel').style.color = 'red';
-        return false;
-    }else{
-        document.getElementById('telefonoLabel').innerHTML = 'Introduzca un telefono valido';
-        document.getElementById('telefonoLabel').style.color = 'red';
-        document.getElementById('emailLabel').innerHTML = 'Introduzca un email valido';
-        document.getElementById('emailLabel').style.color = 'red';
-        return false;
+        }
     }
 }

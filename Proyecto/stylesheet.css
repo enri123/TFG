@@ -9,7 +9,7 @@ html {
 
 /* Estilos del menú */
 .contenedor-header {
-    background: white;
+    background: #4caf50; /* Verde */
     position: fixed;
     width: 100%;
     top: 0;
@@ -33,7 +33,7 @@ html {
 
 .contenedor-header header nav ul li a {
     text-align: none;
-    color: #1CB698;
+    color: white; /* Texto oscuro */
     margin: 0 15px;
     padding: 3px;
     transition: .5s;
@@ -41,11 +41,11 @@ html {
 }
 
 .contenedor-header header nav ul li a:hover {
-    color: #1CB698;
+    color: black; /* Verde */
 }
 
 .nav-responsive {
-    background-color: green;
+    background-color: #333; /* Fondo oscuro */
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -54,18 +54,17 @@ html {
 
 /* Estilos de la sección de inicio */
 .inicio {
-    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-    url(assets/kursaal-inicio-hero.jpeg);
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(assets/kursaal-inicio-hero.jpeg);
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    color: #333; /* Texto oscuro */
     display: flex;
     align-items: center;
 }
 
 .inicio .contenido-banner {
     padding: 20px;
-    background-color: green;
+    background-color: #4caf50; /* Verde */
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -74,7 +73,7 @@ html {
 
 .inicio .contenido-banner img {
     margin-top: 40px;
-    border: 10px solid #1CB698;
+    border: 10px solid #fff; /* Blanco */
     display: block;
     width: 80%;
     margin: auto;
@@ -91,7 +90,7 @@ html {
 }
 
 .inicio .contenido-banner .redes a {
-    color: #fff;
+    color: #fff; /* Texto blanco */
     display: inline-block;
     border: 1px solid #fff;
     border-radius: 100%;
@@ -103,13 +102,13 @@ html {
 }
 
 .inicio .contenido-banner .redes a:hover {
-    background-color: #1CB698;
+    background-color: #333; /* Fondo oscuro */
 }
 
 /* Estilos de la sección de cursos */
 .cursos {
-    background-color: green;
-    color: #fff;
+    background-color: #81c784; /* Verde claro */
+    color: #333; /* Texto oscuro */
     padding: 50px 20px;
 }
 
@@ -133,7 +132,7 @@ html {
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: #fff; /* Texto blanco */
     position: relative;
     z-index: 10;
     cursor: pointer
@@ -145,7 +144,7 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: #4caf50; /* Verde */
     z-index: -1;
     transition: 0.5s;
 }
@@ -156,8 +155,8 @@ html {
 
 /* Estilos de la sección de razones */
 .razones {
-    background-color: lightgreen;
-    color: #fff;
+    background-color: #a5d6a7; /* Verde claro */
+    color: #333; /* Texto oscuro */
     padding: 50px 20px;
 }
 
@@ -174,8 +173,8 @@ html {
 
 /* Estilos de la sección de valoraciones */
 .valoraciones {
-    background-color: green;
-    color: #fff;
+    background-color: #81c784; /* Verde claro */
+    color: #333; /* Texto oscuro */
     padding: 50px 20px;
 }
 
@@ -190,12 +189,11 @@ html {
     padding: 20px 0;
 }
 
-
 /* Estilos de la sección de contacto */
 .contacto {
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
+    background-color: #4caf50; /* Verde */
+    color: #fff; /* Texto blanco */
     padding: 50px 0;
 }
 
@@ -252,7 +250,7 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: #4caf50; /* Verde */
     z-index: -1;
     transition: 0.5s;
 }
@@ -263,8 +261,8 @@ html {
 
 /* Estilos del pie de página */
 footer {
-    background-color: #252A2E;
-    color: #fff;
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
@@ -275,8 +273,8 @@ footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #1CB698;
-    color: #fff;
+    background-color: #4caf50; /* Verde */
+    color: #fff; /* Texto blanco */
     position: absolute;
     left: 50%;
     top: -25px;
@@ -300,7 +298,7 @@ footer .arriba {
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background-color: #333; /* Fondo oscuro */
         width: 180px;
     }
     
@@ -309,7 +307,7 @@ footer .arriba {
     }
     
     nav.responsive ul li {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #fff; /* Blanco */
         padding: 10px 0;
     }
 }
@@ -382,7 +380,7 @@ footer .arriba {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: #4caf50; /* Verde */
     z-index: -1;
     transition: 0.5s;
 }
@@ -390,3 +388,5 @@ footer .arriba {
 .razones button:hover .overlay {
     width: 100%;
 }
+
+

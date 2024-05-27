@@ -28,7 +28,7 @@ function saber_mas_basica() {
         z.style.display = "block";
         x.style.display = "none";
     }
-  }
+}
 
 function saber_mas_medio() {
     var z = document.getElementById("part1_medio");
@@ -42,9 +42,9 @@ function saber_mas_medio() {
         z.style.display = "block";
         x.style.display = "none";
     }
-  }
+}
 
-  function saber_mas_superior() {
+function saber_mas_superior() {
     var z = document.getElementById("part1_superior");
     var x = document.getElementById("part2_superior");
 
@@ -56,9 +56,9 @@ function saber_mas_medio() {
         z.style.display = "block";
         x.style.display = "none";
     }
-  }
-  
-  function saber_mas_especializacion() {
+}
+
+function saber_mas_especializacion() {
     var z = document.getElementById("part1_especializacion");
     var x = document.getElementById("part2_especializacion");
 
@@ -70,9 +70,9 @@ function saber_mas_medio() {
         z.style.display = "block";
         x.style.display = "none";
     }
-  }
+}
 
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formContacto").addEventListener('submit', validarFormulario);
 });
 function validarFormulario(event) {

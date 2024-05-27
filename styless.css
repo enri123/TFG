@@ -1,0 +1,444 @@
+* {
+    /* Hace que la página ocupe todo el ancho de la pantalla */
+    margin: 0;
+}
+body {
+    background-color: #81c784;
+}
+
+.contenido_default {
+    align-items: center;
+    align-self: center;
+    text-align: center; /* Centra el contenido del div */
+}
+
+.header {
+    padding: 10px;
+    margin-bottom: 20px; /* Añade espacio entre el encabezado y el formulario */
+}
+
+h2 { 
+    margin: 0 auto; /* Centra el h2 */
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    width: 650px;
+}
+
+.cuerpo {
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+.cuerpo form {
+    display: inline-block; /* Evita que el formulario ocupe todo el ancho */
+    text-align: left; /* Alínea el texto a la izquierda dentro del formulario */
+}
+
+.contenedor-header {
+    background: #4caf50; 
+    width: 100%;
+}
+
+.contenedor-header header {
+    display: flex; 
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 15px 20px;
+}
+
+.contenedor-header header ul {
+    display: flex; 
+    list-style: none; /* Quita los puntos de la lista */
+}
+
+.contenedor-header header nav ul li a {
+    color: white; 
+    margin: 0 15px; /* Márgenes */
+    padding: 3px; 
+    transition: .5s; /* Es lo que tarda en cambiar de color al poner el ratón encima */
+    text-decoration: none; /* Quita las líneas de debajo de las palabras */
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: black; /* Color al pasar el ratón */
+}
+
+.nav-responsive {
+    background-color: #333; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 5px; /* Redondea el borde */
+    display: none; /* Dependiendo de la pantalla esta oculto o no */
+    margin-left: auto;
+}
+
+.datos_usuario {
+    padding: 50px 50px;
+}
+
+.datos_usuario p {
+    font-size: 24px; 
+}
+
+.contenido_login {
+    display: flex;
+}
+
+.formulario {
+    width: 60%; /* El div del formulario ocupa el 60% del ancho total */
+}
+
+.primer_div {
+    width: 40%; /* El div del formulario ocupa el 60% del ancho total */
+}
+
+.contenedor-header header nav ul li a.login {
+    color: black; /* Cambia el color del texto a negro */
+}
+
+.contacto {
+    color: #fff; 
+    padding: 50px 0; 
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px; 
+    margin: auto; 
+}
+
+.contacto .fila {
+    display: flex; 
+}
+
+.contacto .col {
+    width: 50%; 
+    padding: 10px; 
+    position: relative; 
+}
+
+.contacto .col input,
+.contacto .col textarea,
+.contacto .col select {
+    display: block; 
+    width: 100%; 
+    padding: 18px; 
+    border: none; 
+    margin-bottom: 20px; 
+    background-color: #252A2E; 
+    color: #fff; 
+    font-size: 18px;
+}
+
+.contacto .col select {
+    -webkit-appearance: none; /* Remove default arrow in Chrome */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpolygon points='472 128 256 352 80 175 40 215 256 448 472 215 472 128' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 12px;
+}
+
+/* Ajustar el tamaño del mapa */
+.col iframe {
+    width: 600px;
+    height: 600px; 
+}
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 50px 0 30px 0; 
+    text-align: center; 
+    position: relative; 
+    width: 100%; 
+}
+
+footer .arriba {
+    display: block; 
+    width: 50px; 
+    height: 50px; 
+    background-color: #4caf50; 
+    color: #fff; 
+    position: absolute; 
+    left: 50%; 
+    top: -25px; /* Hace que el botón esté entre el footer y contacto */
+    border-radius: 50%; 
+    line-height: 50px; 
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.informacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.informacion div {
+    margin: 0 10px;
+}
+
+.informacion table {
+    width: 100%;
+}
+
+.informacion th, .informacion td {
+    padding: 10px;
+    border: 0px;
+    text-align: center;
+}
+
+.informacion td a {
+    text-decoration: none;
+    color: white; 
+}
+
+.contactos {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.contacto-item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contacto-item i {
+    margin-right: 10px;
+}
+
+/* El mismo que el header */
+.redes a {
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.redes a:hover {
+    background-color: #4caf50;
+}
+
+/* Estilos responsive */
+@media screen and (max-width:1920px) {
+    nav {
+        display: none;
+    }
+    
+    .nav-responsive {
+        display: block;
+    }
+    
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #333; 
+        width: 180px;
+    }
+    
+    nav.responsive ul {
+        display: block !important;
+    }
+    
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff; /* Blanco */
+        padding: 10px 0;
+    }
+
+    h2 { 
+        width: 50%;
+    }
+
+    /* Alinear el mapa debajo del formulario */
+    .fila {
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+    }
+    
+    /* Ajustar el tamaño del mapa */
+    .col iframe {
+        width: 300px;
+        height: 300px; 
+    }
+}
+
+@media screen and (max-width:1024px) {
+    nav {
+        display: none;
+    }
+    
+    .nav-responsive {
+        display: block;
+    }
+    
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #333; 
+        width: 180px;
+    }
+    
+    nav.responsive ul {
+        display: block !important;
+    }
+    
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff; /* Blanco */
+        padding: 10px 0;
+    }
+
+    h2 { 
+        width: 50%;
+    }
+
+    /* Alinear el mapa debajo del formulario */
+    .fila {
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+    }
+    
+    /* Ajustar el tamaño del mapa */
+    .col iframe {
+        width: 300px;
+        height: 300px; 
+    }
+}
+
+@media screen and (max-width:980px) {
+    nav {
+        display: none;
+    }
+    
+    .nav-responsive {
+        display: block;
+    }
+    
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #333; 
+        width: 180px;
+    }
+    
+    nav.responsive ul {
+        display: block !important;
+    }
+    
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff; /* Blanco */
+        padding: 10p
+    }
+
+    h2 { 
+        margin: 0 auto; /* Centra el h2 */
+        background-color: #4caf50;
+        color: white;
+        font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+        width: 50%;
+    }
+
+    .contenido_login {
+        flex-direction: column;
+    }
+
+    /* Ajustar el tamaño del mapa */
+    .col iframe {
+        width: 300px;
+        height: 300px; 
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fila {
+        display: block;
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        display: none;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-responsive {
+        display: block;
+    }
+    
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #333; 
+        width: 140px;
+    }
+    
+    nav.responsive ul {
+        display: block !important;
+    }
+    
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff; /* Blanco */
+        padding: 10p
+    }
+
+    .datos_usuario p {
+        font-size: 20px; 
+    }
+
+    h2 { 
+        margin: 0 auto; /* Centra el h2 */
+        background-color: #4caf50;
+        color: white;
+        font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+        width: 100%;
+    }
+
+    .contenido_login {
+        flex-direction: column;
+    }
+
+    /* Alinear el mapa debajo del formulario */
+    .contacto .fila {
+        display: block;
+    }
+
+    .fila {
+        width: 100%;
+    }
+
+    /* Ajustar el tamaño del mapa */
+    .col iframe {
+        width: 300px;
+        height: 300px; 
+    }
+}

@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>TFG</title>
-    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="styles/stylesheet-secundario.css">
 </head>
 <body>
 <div class="contenedor-header">
@@ -67,6 +67,9 @@ if (isset($_POST['submit'])) {
             <div class="logo">
                 <a href="https://ieskursaal.es/"><img src="assets/logo-ies-kursaal.png" width="80px"></a>
             </div>
+
+            <button id="toggleDarkMode" class="toggle-dark-mode">Modo Oscuro</button>
+
             <!--Cambiar con css a calc -->
             <nav id="nav">
                 <ul>
@@ -86,10 +89,6 @@ if (isset($_POST['submit'])) {
 
 
 <footer>
-    <a href="#inicio" class="arriba">
-        <i class="fa-solid fa-angles-up"></i>
-    </a>
-
     <div class="footer">
 
     <!-- Dividirlos en div 25%-->
@@ -135,5 +134,6 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 </footer>
+<script src="scripts/script.js"></script>
 </body>
 </html>

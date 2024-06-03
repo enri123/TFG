@@ -30,7 +30,7 @@
 				* Si se consigue hacerlo, se informa de ello.
 			   * Si no, también se informa y se indica cuál es el
 			   * motivo del fallo con el mensaje de error.*/
-			   $sql = file_get_contents('db.sql');			 
+			   $sql = file_get_contents('bd/db.sql');			 
 			   $this->ejecuta_SQL($sql);
 			}
 		} catch (PDOException $e) {
@@ -68,15 +68,23 @@
     }//end add_contacto
 
 	// Añadir un contacto a la lista
-	function add_valoracion ($nombre, $correo, $mensaje, $foto_perfil) 
+	function add_valoracion ($id_usuario, $mensaje) 
 	{
-    	  $sql_script = "INSERT INTO valoraciones (nombre, correo, mensaje, foto_perfil)
-    	  				VALUES('$nombre', '$correo', '$mensaje', '$foto_perfil')";    	  					
+    	  $sql_script = "INSERT INTO valoraciones (id_usuario, mensaje)
+		  				VALUES('$id_usuario', '$mensaje')";    	  					
     	
 		$this->ejecuta_SQL($sql_script);
     }//end add_contacto
     
-    // Función que ejecuta una SQL
+	function join_tabla()
+	{
+		$sql_script = "SELECT valoraciones.mensaje, valoraciones.hora, usuario.correo, usuario.foto_perfil, usuario.nombre 
+                           FROM valoraciones 
+                           JOIN usuario ON valoraciones.id_usuario = usuario.codigo_user";
+        return $this->ejecuta_SQL($sql_script);
+	}
+    
+	// Función que ejecuta una SQL
     function ejecuta_SQL($sql) {
     $resultado=$this->db->query($sql);
     if (!$resultado)

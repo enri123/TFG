@@ -18,10 +18,9 @@ require_once("sesiones.php");
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>TFG</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles/stylesheet-principal.css">
 </head>
 <body>
-    <script src="script.js"></script>
 
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
@@ -29,7 +28,9 @@ require_once("sesiones.php");
             <div class="logo">
                 <a href="https://ieskursaal.es/"><img src="assets/logo-ies-kursaal.png" width="80px"></a>
             </div>
-            <!--Cambiar con css a calc -->
+            <!-- Botón para cambiar el modo -->
+            <button id="toggleDarkMode" class="toggle-dark-mode">Modo Oscuro</button>
+
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
@@ -121,6 +122,10 @@ require_once("sesiones.php");
                         <img src="assets/kursaal-inicio-hero.jpeg">
                     </div>
                 </div>
+                <button onclick="saber_mas('basico')">
+                    Saber más  
+                    <span class="overlay"></span>
+                </button>
                  
             </div>
         </div>
@@ -191,7 +196,7 @@ require_once("sesiones.php");
                         </div>
                     </div>
                 </div>
-                <button onclick="saber_mas_medio()">
+                <button onclick="saber_mas('medio')">
                     Saber más  
                     <span class="overlay"></span>
                 </button>
@@ -265,7 +270,7 @@ require_once("sesiones.php");
                         <img src="assets/kursaal-inicio-hero.jpeg">
                     </div>
                 </div>
-                <button onclick="saber_mas_superior()">
+                <button onclick="saber_mas('superior')">
                     Saber más  
                     <span class="overlay"></span>
                 </button>
@@ -328,7 +333,7 @@ require_once("sesiones.php");
                         </div>
                     </div>
                 </div>
-                <button onclick="saber_mas_especializacion()">
+                <button onclick="saber_mas('especializacion')">
                     Saber más 
                     <span class="overlay"></span>
                 </button>
@@ -340,7 +345,7 @@ require_once("sesiones.php");
     <!-- SECCION Por que estudiar con nosotros -->
     <section class="razones" id="razones">
         <div class="contenido-seccion">
-            <h2>Por que estudiar con nosotros</h2>
+            <h2>Por qué estudiar con nosotros</h2>
             <br>    
 
             <p class="texto_razones">El Instituto de Educación Secundaria (IES) Kursaal se sitúa como un faro de aprendizaje, orientando a los jóvenes hacia un futuro brillante. Con una rica historia en la enseñanza y un compromiso de excelencia, es reconocido por su ambiente de aprendizaje estimulante y respetuoso.</br></br>
@@ -364,30 +369,30 @@ require_once("sesiones.php");
             // Creamos la BD 
             $mi_contacto = new contacto(); 
 
-            $sql_script = "SELECT * FROM valoraciones";
-            $resultado = $mi_contacto->ejecuta_SQL($sql_script);
+            $result = $mi_contacto->join_tabla();
 
-            $filas = $resultado->rowCount();
+            $filas = $result->rowCount();
             if ($filas == 0) { //resultado query vacío
                 echo "<CENTER><p>No se encuentra ninguna valoración</p></CENTER>";
             } else { //la búsqueda no es vacía
-                foreach ($resultado as $valor) {
+                foreach ($result as $valor) {
                     echo "<article>
-                                <div class='logo'>
-                                    <img src='" . $valor['foto_perfil'] . "' width='5%'>
-                                </div>
-                                <p>
-                                    <span>" . $valor['nombre'] . "</span>
-                                    <span> - " . date('d/m/Y H:i:s', strtotime($valor['hora'])) . "</span>
-                                </p>
-                                <div>";
-                    // Aquí podrías agregar la lógica para mostrar las estrellas según la valoración
-                    echo "
-                                </div>
-                                <p>" . $valor['mensaje'] . "</p><br>
-                            </article>";
-                } // end bucle
-            }
+                    <div class='logo'>
+                        <img src='" . $valor['foto_perfil'] . "' width='5%'>
+                    </div>
+                    <p>
+                        <span>" . htmlspecialchars($valor['nombre']) . "</span>
+                        <span> - " . date('d/m/Y', strtotime($valor['hora'])) . "</span> <br>
+                        <span>" . htmlspecialchars($valor['correo']) . "</span>
+                    </p>
+                    <div>";
+
+        echo "
+                    </div>
+                    <p>" . htmlspecialchars($valor['mensaje']) . "</p><br>
+                </article>";
+    } // end bucle
+}
 
             if (isset($_SESSION["login_exitoso"]) && $_SESSION["login_exitoso"] == true){
 ?>
@@ -476,6 +481,6 @@ require_once("sesiones.php");
         </div>
     </div>
 </footer>
-
+<script src="scripts/script.js"></script>
 </body>
 </html>

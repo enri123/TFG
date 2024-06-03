@@ -36,15 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>TFG</title>
-    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="styles/stylesheet-secundario.css">
 </head>
 <body>
-<script src="script.js"></script>
 <div class="contenedor-header">
         <header>
             <div class="logo">
                 <a href="https://ieskursaal.es/"><img src="assets/logo-ies-kursaal.png" width="80px"></a>
             </div>
+
+            <button id="toggleDarkMode" class="toggle-dark-mode">Modo Oscuro</button>
+
             <!--Cambiar con css a calc -->
             <nav id="nav">
                 <ul>
@@ -85,5 +87,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     </div>
 </div>
+<script src="scripts/script.js"></script>
 </body>
 </html>

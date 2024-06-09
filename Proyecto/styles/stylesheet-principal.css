@@ -46,6 +46,7 @@ button.toggle-dark-mode {
 }
 
 .contenedor-header {
+    z-index: 1;
     background: var(--primary-color);
     position: fixed; /* Permanece durante toda la navegación */
     width: 100%;
@@ -304,6 +305,47 @@ Estilos de la sección de razones
 
 .razones button:hover .overlay {
     width: 100%;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    max-width: 700px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.slide {
+    display: none;
+    text-align: center;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* 

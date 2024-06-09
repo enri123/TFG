@@ -86,7 +86,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br>
     <p><?= $mensaje_val ?></p>
 
-    <footer>
 <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -37,7 +37,6 @@
 
         <button id="toggleDarkMode" class="toggle-dark-mode">Modo Oscuro</button>
 
-        <!-- Cambiar con css a calc -->
         <nav id="nav">
             <ul>
                 <li><a href="index_contacto.php" onclick="seleccionar()">INICIO</a></li>
@@ -70,7 +69,6 @@
             echo "<img src='" . $usuario['foto_perfil'] . "' width='120px' alt='Foto de perfil'>";
             echo "<p>Usuario: " . $usuario['nombre'] . "</p>";
             echo "<p>Correo: " . $usuario['correo'] . "</p>";
-            echo "<p>Clave: " . $usuario['clave'] . "</p>";
             echo "  <br><form action='sesiones.php' method='POST' class='boton_logout'>
                       <input type='submit' value='Logout' name='logout'>
                     </form>";

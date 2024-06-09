@@ -21,7 +21,6 @@ require_once("sesiones.php");
     <link rel="stylesheet" href="styles/stylesheet-principal.css">
 </head>
 <body>
-
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
@@ -69,8 +68,8 @@ require_once("sesiones.php");
         <!-- SECCION CURSOS -->
     <section id="cursos" class="cursos">
         <!--Basica-->
-        <div class="contenedor-seccion">
-            <div class="basica">
+        <div class="contenedor-seccion" >
+            <div class="basica" class="animate-on-scroll">
                 <h2>FP Básica: Informática y Comunicaciones</h2>
                 <div class="contenedor">
                     <div class="contenido">
@@ -119,7 +118,7 @@ require_once("sesiones.php");
                         </div>
                     </div>
                     <div class="imagen">
-                        <img src="assets/kursaal-inicio-hero.jpeg">
+                        <img src="assets/fpBasica.jpeg">
                     </div>
                 </div>
                 <button onclick="saber_mas('basico')">
@@ -131,12 +130,12 @@ require_once("sesiones.php");
         </div>
         <!--Medio-->
         <div class="contenedor-seccion">
-            <div class="medio">
+            <div class="medio" class="animate-on-scroll">
                 <h2>Grado Medio: Sistemas Microinformáticos y redes</h2>
                 <!-- Contenido de la sección medio -->
                 <div class="contenedor">
                     <div class="imagen">
-                        <img src="assets/kursaal-inicio-hero.jpeg">
+                        <img src="assets/GM.jpg">
                     </div>
                     <div class="contenido">
                         <div id="part1_medio" style=" display: block;">
@@ -204,7 +203,7 @@ require_once("sesiones.php");
         </div>
         <!--Superior-->
         <div class="contenedor-seccion">
-            <div class="superior">
+            <div class="superior" class="animate-on-scroll">
                 <!-- Contenido de la sección superior -->
                 <h2>Grado Superior: Desarrollo de aplicaciones web</h2>
                 <div class="contenedor">
@@ -267,7 +266,7 @@ require_once("sesiones.php");
                         </div>
                     </div>
                     <div class="imagen">
-                        <img src="assets/kursaal-inicio-hero.jpeg">
+                        <img src="assets/GS.png">
                     </div>
                 </div>
                 <button onclick="saber_mas('superior')">
@@ -278,12 +277,12 @@ require_once("sesiones.php");
         </div>
         <!--Especialización-->
         <div class="contenedor-seccion">
-            <div class="especializacion">
+            <div class="especializacion" class="animate-on-scroll">
                 <!-- Contenido de la sección especialización -->
                 <h2>Especialización: Ciberseguridad</h2>
                 <div class="contenedor">
                     <div class="imagen">
-                        <img src="assets/kursaal-inicio-hero.jpeg">
+                        <img src="assets/ciberseguridad.jpeg">
                     </div>
                     <div class="contenido">
                         <div id="part1_especializacion" style=" display: block;">
@@ -353,6 +352,25 @@ require_once("sesiones.php");
             Con un enfoque claro en la innovación, el IES Kursaal fomenta el pensamiento crítico, la creatividad y la resolución de problemas a través de su amplia gama de asignaturas. Nuestro instituto promueve el desarrollo personal de los estudiantes, fomentando valores como la responsabilidad, la tolerancia y el respeto.</br></br>
             En el IES Kursaal creemos firmemente en la importancia de la comunidad. Fomentamos la participación activa de los padres y las familias, creando una red de apoyo sólida y duradera que respalda a cada uno de nuestros estudiantes. En el IES Kursaal, formamos más que estudiantes: construimos el futuro.</br>
             </p>
+
+            <div class="carrusel">
+                <!-- Diapositiva 1 -->
+                <div class="slide">
+                    <img src="assets/GS.png">
+                </div>
+                <!-- Diapositiva 2 -->
+                <div class="slide">
+                    <img src="assets/ciberseguridad.jpeg">
+                </div>
+                <!-- Diapositiva 3 -->
+                <div class="slide">
+                    <img src="assets/GM.jpg">
+                </div>
+                <!-- Botón para ir a la diapositiva anterior -->
+                <a class="prev" id="prevSlide">&#10094;</a>
+                <!-- Botón para ir a la siguiente diapositiva -->
+                <a class="next" id="nextSlide">&#10095;</a>
+            </div>
 
             <button>
                 <a href="https://ieskursaal.es/">Mas info </a>
@@ -481,6 +499,7 @@ require_once("sesiones.php");
         </div>
     </div>
 </footer>
+<div id="visitCount"></div>
 <script src="scripts/script.js"></script>
 </body>
 </html>

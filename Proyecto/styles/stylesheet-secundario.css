@@ -237,6 +237,21 @@ footer {
     margin-right: 10px;
 }
 
+.contenido_envio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Viewport height */
+    text-align: center;
+    font-size: 2em; /* Duplicar el tamaño del texto */
+    width: 100%; /* Asegurar que el div ocupa todo el ancho */
+}
+
+.contenido_envio h2 {
+    width: 200%; /* Duplicar el tamaño del contenedor del texto */
+    background-color: var(--secondary-color2);
+}
+
 /* El mismo que el header */
 .redes a {
     color: var(--font-color);

@@ -85,55 +85,11 @@ if (isset($_POST['submit'])) {
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
-    </div>
-
-
-<footer>
-    <div class="footer">
-
-    <!-- Dividirlos en div 25%-->
-        <div class="logo">
-            <a href="https://ieskursaal.es/"><img src="assets/logo-ies-kursaal.png" width="15%"></a>
-        </div>
-
-        <div class="informacion">
-            <table>
-                <tr>
-                    <div class="Sobre_nosotros">
-                        <th class="sobre-nosotros-header">Sobre nosotros</th>
-                    </div>
-
-                    <th>Contactos</th>
-
-                    <div class="Redes_sociales">
-                        <th class="redes-sociales-header">Redes Sociales</th>
-                    </div>
-                </tr>
-                <tr>
-                    <div class="Sobre_nosotros">
-                        <td class="sobre-nosotros-content"><a href="https://ieskursaal.es/ies-kursaal/nuestra-historia/">Nuestra historia</a></td>
-                    </div>
-                    <td>
-                        <div class="contactos">
-                            <div class="contacto-item"><i class="fas fa-home"></i><span>Avd. Virgen de Europa 4, 11202 Algeciras (Cádiz)</span></div>
-                            <div class="contacto-item"><i class="fas fa-phone"></i><span>956670767 – 61</span></div>
-                            <div class="contacto-item"><i class="fas fa-envelope"></i><span>jefatura@ieskursaal.es</span></div>
-                            <div class="contacto-item"><i class="fas fa-info-circle"></i><span>Código Centro: 11000371</span></div>
-                        </div>
-                    </td>
-                    <div class="Redes_sociales">
-                        <td class="redes-sociales-content">
-                            <div class="redes">
-                                <a href="https://www.facebook.com/institutokursaal/"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="https://www.instagram.com/ieskursaal/"><i class="fa-brands fa-instagram"></i></a>
-                            </div>
-                        </td>
-                    </div>
-                </tr>
-            </table>
-        </div>
-    </div>
-</footer>
+</div>
+    
+<div class="contenido_envio">
+    <h2>Muchas gracias por su mensaje!</h2>
+</div>
 <script src="scripts/script.js"></script>
 </body>
 </html>
